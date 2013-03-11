@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Lunch date:</b>
+  <%= @lunch_date_participant.lunch_date_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @lunch_date_participant.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_lunch_date_participant_path(@lunch_date_participant) %> |
+<%= link_to 'Back', lunch_date_participants_path %>

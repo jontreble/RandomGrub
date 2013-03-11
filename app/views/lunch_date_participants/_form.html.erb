@@ -1,0 +1,25 @@
+<%= form_for(@lunch_date_participant) do |f| %>
+  <% if @lunch_date_participant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lunch_date_participant.errors.count, "error") %> prohibited this lunch_date_participant from being saved:</h2>
+
+      <ul>
+      <% @lunch_date_participant.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lunch_date_id %><br />
+    <%= f.number_field :lunch_date_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

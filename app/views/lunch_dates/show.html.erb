@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Lunch date:</b>
+  <%= @lunch_date.lunch_date %>
+</p>
+
+<p>
+  <b>Cutoff date:</b>
+  <%= @lunch_date.cutoff_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_lunch_date_path(@lunch_date) %> |
+<%= link_to 'Back', lunch_dates_path %>

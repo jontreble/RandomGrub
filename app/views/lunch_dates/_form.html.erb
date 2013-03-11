@@ -1,0 +1,25 @@
+<%= form_for(@lunch_date) do |f| %>
+  <% if @lunch_date.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lunch_date.errors.count, "error") %> prohibited this lunch_date from being saved:</h2>
+
+      <ul>
+      <% @lunch_date.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lunch_date %><br />
+    <%= f.datetime_select :lunch_date %>
+  </div>
+  <div class="field">
+    <%= f.label :cutoff_date %><br />
+    <%= f.datetime_select :cutoff_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
